@@ -1,0 +1,103 @@
+<!-- HTML attempt to create a webpage -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Survey </title>
+	</head>
+	<body>
+		<script>
+			function activateText() {
+				// Get the checkbox
+				var checkBox = document.getElementById("other");
+				// Get the output text
+				var text = document.getElementById("text");
+
+				// If the checkbox is checked, display the output text
+				if (checkBox.checked == true){
+					text.style.display = "block";
+				} else {
+					text.style.display = "none";
+				}
+			}
+		</script>
+		<!-- <h3>Please help fill out the questions on this survey</h3> -->
+		<!-- <ol>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+		</ol>
+
+		<h3>List</h3>
+		<ul>
+			<li>Apple</li>
+			<li>Banana</li>
+			<li>Cherry</li>
+		</ul>
+
+		<h3>Definition List</h3>
+		<dl>
+			<dt>Definition Term</dt>
+			<dd>Definition Description</dd>
+		</dl> -->
+
+		<form>
+			<h3>Please fill out the following survey</h3>
+			<label for="name"><strong>Name: </strong></label>
+			<input type="text" id="name" name="name" required>
+
+			<br />
+			<br />
+
+			<label for="age"><strong>Age:</strong>  </label>
+			<select name="age" id="age">
+				<option value="20"><20</option>
+				<option value="30">20 - 60</option>
+				<option value="60">>60</option>
+			</select>
+			
+			<br />
+			<br />
+
+			<label for="gender"> <strong>Gender: </strong></label>
+			<br />
+			<input type="radio" id="male" name="male" checked="checked">
+			<label for="male">Male</label>
+			<br />
+			<input type="radio" id="female" name="female">
+			<label for="female">Female</label>
+
+			<br />
+			<br />
+
+			<label for="hobbies"> <strong>Hobbies:</strong></label>
+			<br />
+			<input type="checkbox" id="ski" name="ski">
+			<label for="ski">Ski</label>
+			<br />
+			<input type="checkbox" id="tt" name="tt">
+			<label for="tt">Table Tennis</label>
+			<br />
+			<input type="checkbox" id="swim" name="swim">
+			<label for="swim">Swim</label>
+			<br />
+			<input type="checkbox" id="hike" name="hike">
+			<label for="hike">Hike</label>
+			<br />
+			<input type="checkbox" id="kayak" name="kayak">
+			<label for="kayak">Kayak</label>
+			<br />
+			<input type="checkbox" id="other" name="other" onclick="activateText()">
+			<label for="other">Other</label>
+
+			<input id="text" style="display:none">
+
+
+			<br />
+			<p><strong>Please leave a comment:</strong></p>
+			<textarea id="message" name="message" rows="4" cols="50" placeholder="Enter message here" required></textarea>
+			<br />
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
